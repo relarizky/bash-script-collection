@@ -29,7 +29,7 @@ file_filter(){
   local exts="$(python3 -c "print('${name}'.split('.')[-1].lower())")"  # file extension
 
   if [ ${exts} != "odt" ] && [ ${exts} != "doc" ] && [ ${exts} != "docx" ]; then
-    rm -rf ${name}
+    rm --force ${name}
     echo "[$(current_time)] Successfully removed ${name}"
   fi
 }
