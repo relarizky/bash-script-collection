@@ -36,7 +36,6 @@ file_filter(){
 
 main(){
   local share="${HOME}${1}"
-  local content=()  # array
 
   for file in $(find ${share} -maxdepth 1 -type f); do
     file_filter "${file}"
